@@ -1,20 +1,5 @@
 const path = require('path');
 
-// module.exports = {
-//   test: /\.(js|jsx)$/,
-//   exclude: /node_modules/,
-//   use: {
-//     loader: "babel-loader"
-//   },
-//   entry: './src/index.js',
-//   output: {
-//     filename: 'main.js',
-//     path: path.resolve(__dirname, 'dist'),
-//   },
-// };
-
-
-
 module.exports = {
     module: {
       rules: [
@@ -27,13 +12,14 @@ module.exports = {
         }
       ],         
     },
-    entry: './src/view.js',
+    entry: './src/app.js',
     output: {
-      filename: 'main.js',
+      filename: 'bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
     mode: "development",
     performance: {
       hints: false
     },
+    target: 'node'
   };
