@@ -15,9 +15,8 @@ async function fetchData() {
 }
 
 function processData(data) {
-  let { state, negative} = data;
-  let stateData = {state, negative};
-  return stateData;
+  
+  return data;
 }
 
 class App extends React.Component {
@@ -45,9 +44,9 @@ class App extends React.Component {
   render() {
     
       return (
-        <div>
-          <h3>Covid Stats</h3>
-          <div>State of California</div>
+        <div class="container">
+        <button type="button" class="btn btn-warning">Covid Statistics</button>
+          <p class="h6">State of California</p>
           <MyTable covidData={this.state.covidData}/>
         </div>
       );
